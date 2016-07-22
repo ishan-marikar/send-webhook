@@ -1,0 +1,24 @@
+{
+  "name": "send-webhook",
+  "version": "0.0.1",
+  "description": "Send webhooks to multiple urls with a payload",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishan-marikar/send-webhook.git"
+  },
+  "keywords": [
+    "send",
+    "webhook",
+    "url"
+  ],
+  "author": "Ishan Marikar <ishan.marikar@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishan-marikar/send-webhook/issues"
+  },
+  "homepage": "https://github.com/ishan-marikar/send-webhook#readme"
+}
