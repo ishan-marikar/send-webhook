@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/ishan-marikar/send-webhook/issues"
   },
-  "homepage": "https://github.com/ishan-marikar/send-webhook#readme"
+  "homepage": "https://github.com/ishan-marikar/send-webhook#readme",
+  "dependencies": {
+    "async": "^2.0.0",
+    "unirest": "^0.5.0"
+  }
 }
