@@ -1,6 +1,6 @@
 {
   "name": "send-webhook",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Send webhooks to multiple urls with a payload",
   "main": "index.js",
   "scripts": {
