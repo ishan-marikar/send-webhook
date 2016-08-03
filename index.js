@@ -11,6 +11,10 @@ var sendWebHooks = (urls, data, callback) => {
     };
   }
 
+  if (typeof urls === 'string') {
+    urls[0] = urls;
+  }
+
   var httpGet = (url, _callback) => {
     unirest.post(url)
       .type('json')
