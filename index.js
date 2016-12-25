@@ -2,8 +2,9 @@ const async = require('async');
 const unirest = require('unirest');
 
 
-var sendWebHooks = (urls, data, callback) => {
+var sendWebHooks = (input, data, callback) => {
 
+  var urls = (typeof input === 'string')? [input]:input;
   if (typeof callback !== 'function') {
     callback = (error, response) => {
       if (error) console.error(error);
@@ -11,22 +12,18 @@ var sendWebHooks = (urls, data, callback) => {
     };
   }
 
-  if (typeof urls === 'string') {
-    urls[0] = urls;
-  }
-
-  var httpGet = (url, _callback) => {
+  var httpPost = (url, _callback) => {
     unirest.post(url)
       .type('json')
       .send(data)
       .end((response) => {
-        _callback(null, response.body);
+        _callback(null, response);
       })
   };
 
-  async.map(urls, httpGet, (error, response) => {
+  async.map(urls, httpPost, (error, response) => {
     if (error) return callback(error, null);
-    return callback(null, true);
+    return callback(null, response);
   });
 };
 
