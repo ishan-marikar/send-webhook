@@ -4,13 +4,13 @@
 ``` js
 const webhook = require('send-webhook');
 
-const urls = [
+const URLS = [
   'http://example.com/webook_reciever',
   'http://johndoe.com/webhook',
   'http://incoming.com/recieve'
 ];
 
-const data = {
+const payload = {
   // This can be anything you want to send.
   status: true,
   data: {
@@ -18,13 +18,20 @@ const data = {
   }
 };
 
-webhook(urls, data, (error, status) => {
-  if(error) console.log(error);
+/* 
+  You can also do it to a single URL by just putting in a string
+  instead of an array.
+*/
+
+
+webhook(URLS, payload, (error, status) => {
+  if(error) console.error(error);
   console.log('Webhooks have been sent.');
 });
 
+
+
 /*
-  RESULT 1
     URL: http://johndoe.com/webhook
     TYPE: POST
     MIME: application/json
