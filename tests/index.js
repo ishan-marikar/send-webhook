@@ -30,7 +30,7 @@ describe('webhook', ()=> {
         });
     });
 
-    it('should work with a multiple urls', () => {
+    it('should work with multiple urls', () => {
         webhook( [
             'http://localhost:8000',
             'http://localhost:9000'
