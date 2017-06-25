@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/ishan-marikar/send-webhook#readme",
   "dependencies": {
-    "async": "^2.0.0",
+    "async": "^2.5.0",
     "unirest": "^0.5.0"
   }
 }
